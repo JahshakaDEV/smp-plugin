@@ -18,12 +18,16 @@ import java.time.Instant;
 
 public class CommandListener extends ListenerAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(CommandListener.class);
+    static Smp smp = Smp.getPlugin();
     private final CommandManager manager = new CommandManager();
 
     @Override
     public void onReady(@Nonnull ReadyEvent event) {
         JDA jda = Smp.jda;
         LOGGER.info("{} is ready", event.getJDA().getSelfUser().getAsTag());
+        if (smp.getConfig().getInt("restartMessage") == 0) {
+            return;
+        }
         EmbedBuilder shutdown_embed = new EmbedBuilder().setColor(Color.green)
                 .setTitle("Der Server wurde gestartet und ist nun online!").setTimestamp(Instant.now())
                 .setAuthor(jda.getSelfUser().getName(), jda.getSelfUser().getAvatarUrl(), jda.getSelfUser().getAvatarUrl());

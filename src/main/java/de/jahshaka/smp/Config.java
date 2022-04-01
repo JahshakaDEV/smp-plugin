@@ -17,10 +17,13 @@ public class Config {
     public static String logForModChannelID = Objects.requireNonNull(Smp.getPlugin().getConfig().get("log_for_mod_channel_id")).toString();
     public static String announcementChannelID = Objects.requireNonNull(Smp.getPlugin().getConfig().get("announcement_channel_id")).toString();
     public static String whitelistChannelID = Objects.requireNonNull(Smp.getPlugin().getConfig().get("whitelist_channel_id")).toString();
-    public static String timestampForLogs = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(getLocatDateTime()) + "! \n▬▬▬▬▬▬▬▬▬▬";
     public static String webhookURL = Objects.requireNonNull(Smp.getPlugin().getConfig().get("webhook_url")).toString();
     public static String channelForMcChatUserID = Objects.requireNonNull(Smp.getPlugin().getConfig().get("chat_for_user_channel_id")).toString();
     public static TextComponent tc = Component.text("[", NamedTextColor.GRAY).append(Component.text("SMP", NamedTextColor.YELLOW)).append(Component.text("] ", NamedTextColor.GRAY));
+
+    public static String timestampForLogs() {
+        return DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").format(getLocatDateTime()) + "! \n▬▬▬▬▬▬▬▬▬▬";
+    }
 
     public static LocalDateTime getLocatDateTime() {
         return LocalDateTime.now();

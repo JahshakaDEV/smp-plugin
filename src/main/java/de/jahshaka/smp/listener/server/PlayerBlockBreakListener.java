@@ -20,7 +20,7 @@ public class PlayerBlockBreakListener implements Listener {
             Smp.jda.getGuildById(Config.guildID).getTextChannelById(Config.logForModChannelID)
                     .sendMessage("`" + event.getPlayer().getName() + "` farmed `" + event.getBlock().getType().name() +
                             "` at X:" + oreLocation.getBlockX() + " Y:" + oreLocation.getBlockY() + " Z:" + oreLocation.getBlockZ() +
-                            " in " + oreLocation.getWorld().getName() + " at " + Config.timestampForLogs).queue();
+                            " in " + oreLocation.getWorld().getName() + " at " + Config.timestampForLogs()).queue();
         }
     }
 

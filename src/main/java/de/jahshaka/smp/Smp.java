@@ -94,6 +94,9 @@ public final class Smp extends JavaPlugin {
     }
 
     void shutdownBot() {
+        if (this.getConfig().getInt("restartMessage") == 0) {
+            return;
+        }
         EmbedBuilder shutdown_embed = new EmbedBuilder().setColor(Color.red)
                 .setTitle("Der Server wurde gestoppt!").setTimestamp(Instant.now())
                 .setAuthor(jda.getSelfUser().getName(), jda.getSelfUser().getAvatarUrl(), jda.getSelfUser().getAvatarUrl());

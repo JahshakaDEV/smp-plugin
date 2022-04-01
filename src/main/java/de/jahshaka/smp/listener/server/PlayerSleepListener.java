@@ -91,7 +91,7 @@ public class PlayerSleepListener implements Listener {
                     setDatime(player);
                     String msg = inBed + "/" + player.getWorld().getPlayerCount() + " in Bed! Skip night ";
                     Smp.jda.getGuildById(Config.guildID).getTextChannelById(Config.logForModChannelID)
-                            .sendMessage(msg + Config.timestampForLogs).queue();
+                            .sendMessage(msg + Config.timestampForLogs()).queue();
                 }
             }
         }, 50L); //20 Tick (1 Second) delay before run() is called

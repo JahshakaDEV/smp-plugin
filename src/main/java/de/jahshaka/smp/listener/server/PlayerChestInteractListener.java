@@ -48,7 +48,7 @@ public class PlayerChestInteractListener implements Listener {
                     Location loc = event.getPlayer().getLocation();
                     String msg = "`" + event.getPlayer().getName() + "` took ```\n" + missingItems + "\n``` out of a chest at " +
                             "X:" + loc.getBlockX() + " Y:" + loc.getBlockY() + " Z:" + loc.getBlockZ() + " in " +
-                            loc.getWorld().getName() + " at " + Config.timestampForLogs;
+                            loc.getWorld().getName() + " at " + Config.timestampForLogs();
                     Smp.jda.getGuildById(Config.guildID).getTextChannelById(Config.logForModChannelID)
                             .sendMessage(msg).queue();
                 }

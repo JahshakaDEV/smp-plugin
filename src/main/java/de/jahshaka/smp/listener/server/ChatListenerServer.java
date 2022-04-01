@@ -19,7 +19,7 @@ public class ChatListenerServer implements Listener {
         String msg = PlainTextComponentSerializer.plainText().serialize(event.message());
         Smp.jda.getGuildById(Config.guildID).getTextChannelById(Config.chatLogChannelID)
                 .sendMessage(event.getPlayer().getName() + ": `" + msg
-                        + "` " + Config.timestampForLogs).queue();
+                        + "` " + Config.timestampForLogs()).queue();
         sendMessageToMinecraftChatChannel(msg, event);
     }
 

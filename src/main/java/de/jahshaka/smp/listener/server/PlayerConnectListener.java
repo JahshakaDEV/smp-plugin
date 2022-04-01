@@ -23,7 +23,7 @@ public class PlayerConnectListener implements Listener {
                 .append(Component.text("] " + event.getPlayer().getName(), NamedTextColor.GRAY));
         event.joinMessage(joinMessage);
         Smp.jda.getGuildById(Config.guildID).getTextChannelById(Config.logForModChannelID)
-                .sendMessage("`" + event.getPlayer().getName() + "` joined the Server! " + Config.timestampForLogs).queue();
+                .sendMessage("`" + event.getPlayer().getName() + "` joined the Server! " + Config.timestampForLogs()).queue();
     }
 
 
@@ -34,7 +34,7 @@ public class PlayerConnectListener implements Listener {
                 .append(Component.text("] " + event.getPlayer().getName(), NamedTextColor.GRAY));
         event.quitMessage(quitMessage);
         Smp.jda.getGuildById(Config.guildID).getTextChannelById(Config.logForModChannelID)
-                .sendMessage("`" + event.getPlayer().getName() + "` left the Server! " + Config.timestampForLogs).queue();
+                .sendMessage("`" + event.getPlayer().getName() + "` left the Server! " + Config.timestampForLogs()).queue();
         if (PlayerSleepListener.inBed.contains(event.getPlayer().getUniqueId().toString())) {
             PlayerSleepListener.inBed.remove(event.getPlayer().getUniqueId().toString());
         }

@@ -11,7 +11,7 @@ public class PlayerDieListener implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
         Smp.jda.getGuildById(Config.guildID).getTextChannelById(Config.logForModChannelID)
-                .sendMessage(":skull_crossbones: " + event.getDeathMessage() + "! " + Config.timestampForLogs).queue();
+                .sendMessage(":skull_crossbones: " + event.getDeathMessage() + "! " + Config.timestampForLogs()).queue();
 
     }
 
