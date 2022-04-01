@@ -1,4 +1,5 @@
 # User-specific stuff
+
 .idea/
 
 *.iml
@@ -147,3 +148,4 @@ gen
 gradle-app.setting
 !gradle-wrapper.jar
 .gradletasknamecache
+src/main/resources/config.yml
