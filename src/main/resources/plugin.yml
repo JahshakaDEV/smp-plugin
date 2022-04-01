@@ -1,0 +1,11 @@
+name: SMP
+version: '${version}'
+main: de.jahshaka.smp.Smp
+api-version: 1.17
+authors: [ Jahshaka ]
+description: Plugin for Survival Multiplayer (SMP) Server.
+website: jahshaka.de
+
+commands:
+  position:
+  playtime:
