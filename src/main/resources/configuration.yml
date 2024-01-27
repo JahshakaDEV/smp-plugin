@@ -1,0 +1,3 @@
+minecraft:
+  commands:
+    position: true
